@@ -1,0 +1,30 @@
+<!-- Cabecera compartida.
+     data-nav: opción del menú; la página la marca como activa con data-activo="...".
+     data-solo: el elemento solo se muestra para ese rol ("lector" o "admin").
+     data-icono: el cargador lo convierte en el icono de componentes/iconos.html.
+     Los componentes no llevan etiquetas svg escritas: Live Server inyecta su script en cada cierre de svg y corta el archivo. -->
+<header class="kr-header">
+  <img src="assets/logo.png" alt="Keralty" height="40">
+  <span class="kr-sep"></span>
+  <span class="kr-apptitle">Documentación de Servicios WSO2<small>Torre de Integración</small></span>
+  <nav class="kr-nav">
+    <span data-nav="inicio">Inicio</span>
+    <span data-nav="info">Información WSO2</span>
+    <span data-nav="plantillas">Plantillas</span>
+    <span data-nav="admin" data-solo="admin">Administración</span>
+  </nav>
+  <div class="kr-right">
+    <a class="kr-help" href="ayuda.html" data-nav="ayuda" aria-label="Ayuda" title="Ayuda"><i class="ic" data-icono="help"></i></a>
+    <span class="kr-ro" data-solo="lector"><i class="ic sm" data-icono="lock"></i>Solo lectura</span>
+    <span class="kr-user" data-solo="lector">
+      <span class="kr-avatar" aria-hidden="true">JP</span>
+      <span class="kr-uname"><b>Juan Pérez</b></span>
+    </span>
+    <span class="kr-user" data-solo="admin">
+      <span class="kr-avatar" aria-hidden="true">CR</span>
+      <span class="kr-uname"><b>Carlos Rojas</b></span>
+      <span class="kr-role">Administrador</span>
+    </span>
+    <span class="kr-btn secondary sm"><i class="ic" data-icono="logout"></i>Cerrar sesión</span>
+  </div>
+</header>
