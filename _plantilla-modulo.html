@@ -1,0 +1,159 @@
+<!doctype html>
+<!--
+  PLANTILLA PARA CREAR UN MÓDULO NUEVO
+  ====================================
+  1. Copia este archivo con el nombre del módulo (por ejemplo, reportes.html) en la raíz del proyecto.
+  2. Cambia el <title> y el texto del encabezado.
+  3. Quita los bloques de ejemplo que no uses (cada uno está marcado con un comentario).
+  4. Si el módulo va en el menú:
+     - componentes/header.html: añade <span data-nav="reportes">Reportes</span> dentro de <nav class="kr-nav">
+       (con data-solo="admin" si solo lo ve el Administrador).
+     - app.js: añade 'Reportes':'reportes.html' al objeto NAV (la clave es el texto del menú).
+     - En esta página, pon data-activo="reportes" en el hueco del header para marcarlo como activo.
+  5. Abre la maqueta con Live Server: los componentes se cargan con fetch y con doble clic el navegador lo bloquea.
+
+  COMPONENTES COMPARTIDOS (componentes.js los pone en cada <div data-componente="...">)
+  - iconos  → sprite de iconos. Va primero, antes de .kr-frame.
+  - header  → cabecera con el menú. data-activo="inicio|info|plantillas|admin|ayuda" marca la opción.
+  - footer  → pie de página. Va al final, dentro de .kr-frame.
+
+  ICONOS: <svg class="ic" aria-hidden="true"><use href="#i-NOMBRE"/></svg>  (tamaño pequeño: class="ic sm")
+  Nombres en componentes/iconos.html: search chev-d chev-r chev-l braces doc file-x star ext link copy download zip
+  close full lock eye eye-off eye-off2 alert alert-c check-c clock x-c minus-c info help history refresh plus minus
+  caret-d caret-r expand collapse tree text folder logout user server git spark upload up
+
+  ROLES: data-solo="lector" o data-solo="admin" muestra el elemento solo para ese rol (sirve en cualquier parte de la página).
+  Para entrar como Administrador en la maqueta: usuario admin / contraseña admin en index.html.
+
+  Todos los estilos están en styles.css (clases kr-*). Evita style="..." en línea: si algo se repite, crea una clase.
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nombre del módulo · Documentación de Servicios WSO2</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div data-componente="iconos"></div>
+    <div class="kr-frame">
+      <div data-componente="header" data-activo="nombre-del-modulo"></div>
+
+      <!-- ENCABEZADO DE LA PÁGINA: migas de pan (opcional), título y descripción.
+           Quita "compact" para el encabezado grande de Inicio. -->
+      <section class="kr-hero compact">
+        <div class="kr-main">
+          <div class="kr-crumb"><span>Inicio</span><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg><b>Nombre del módulo</b></div>
+          <h1 class="kr-h1">Nombre del módulo</h1>
+          <div class="kr-accent"></div>
+          <p class="kr-lead">Una frase que explique para qué sirve este módulo.</p>
+        </div>
+      </section>
+
+      <section class="kr-main kr-pad">
+
+        <!-- FILTROS: app.js convierte cada .kr-select en un desplegable según el texto de su .kr-lbl.
+             Etiquetas con opciones ya definidas (objeto OPC de app.js): Ambiente, Componente, Estado, Fechas,
+             Periodo, Usuario, Categoría, Formato. Para una etiqueta nueva, añade sus opciones a OPC. -->
+        <div class="kr-filters">
+          <div class="kr-field"><span class="kr-lbl">Ambiente</span>
+            <div class="kr-select"><span>Todos los ambientes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+          </div>
+          <div class="kr-field"><span class="kr-lbl">Componente</span>
+            <div class="kr-select"><span>Todos los componentes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+          </div>
+          <!-- CONTENIDO POR ROL: este aviso (kr-hint, nota al lado de los filtros) solo lo ve el lector. -->
+          <div class="kr-hint" data-solo="lector"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><span>Tienes acceso de <b>solo lectura</b>.</span></div>
+        </div>
+
+        <!-- INDICADORES (KPI): l = etiqueta, v = valor, n = nota. -->
+        <div class="kr-kpis">
+          <div class="kr-kpi"><span class="l">Servicios</span><span class="v">93</span><span class="n">con documentación vigente</span></div>
+          <div class="kr-kpi"><span class="l">Casos aprobados</span><span class="v">186</span><span class="n">89 % de los revisados</span></div>
+          <div class="kr-kpi"><span class="l">Pendientes</span><span class="v">12</span><span class="n">en revisión</span></div>
+        </div>
+
+        <!-- BOTONES: variantes primary | secondary | ghost; tamaños sm | lg; "icon" para solo icono; "block" a todo el ancho.
+             Si el texto del botón está en el objeto BTN de app.js, ya navega a esa página (por ejemplo, "Ir a Inicio"). -->
+        <h2 class="kr-h2">Botones y etiquetas</h2>
+        <p class="kr-sub">Ejemplos de los elementos más usados.</p>
+        <p>
+          <span class="kr-btn primary"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Acción principal</span>
+          <span class="kr-btn secondary"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Acción secundaria</span>
+          <span class="kr-btn ghost sm">Acción discreta</span>
+          <span class="kr-btn secondary sm icon" aria-label="Copiar"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg></span>
+        </p>
+        <!-- ESTADOS (kr-badge ok | warn | bad | info), AMBIENTE (kr-pill), COMPONENTE (kr-comp) -->
+        <p>
+          <span class="kr-badge ok"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>APROBADO</span>
+          <span class="kr-badge warn"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>PENDIENTE</span>
+          <span class="kr-badge bad"><svg class="ic" aria-hidden="true"><use href="#i-x-c"/></svg>NO APROBADO</span>
+          <span class="kr-badge info"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>INFORMACIÓN</span>
+          <span class="kr-pill">Producción</span>
+          <span class="kr-comp">API</span>
+        </p>
+      </section>
+
+      <!-- PESTAÑAS CON PANEL: cada .kr-tab con data-panel="id" muestra el elemento con ese id y oculta los demás.
+           El contenedor necesita data-pestanas. La URL con #id abre esa pestaña (por ejemplo, reportes.html#tabla). -->
+      <section class="kr-main kr-pad" data-pestanas>
+        <div class="kr-tabs" role="tablist">
+          <span class="kr-tab on" role="tab" data-panel="tabla"><svg class="ic sm" aria-hidden="true"><use href="#i-doc"/></svg>Tabla</span>
+          <span class="kr-tab" role="tab" data-panel="vacio"><svg class="ic sm" aria-hidden="true"><use href="#i-info"/></svg>Sin datos</span>
+        </div>
+
+        <!-- TARJETA CON TABLA: kr-card con cabecera (kr-card-h) y la tabla dentro de kr-tw.
+             Clases útiles en celdas: num (números alineados), r (alinear a la derecha). -->
+        <div id="tabla" role="tabpanel">
+          <article class="kr-card">
+            <div class="kr-card-h">
+              <div>
+                <h3 class="kr-h3">Título de la tarjeta</h3>
+                <p class="kr-aka">Texto secundario de la tarjeta.</p>
+              </div><span class="kr-btn secondary sm"><svg class="ic" aria-hidden="true"><use href="#i-history"/></svg>Acción de la tarjeta</span>
+            </div>
+            <div class="kr-tw flat">
+              <table class="kr-t tight">
+                <thead>
+                  <tr>
+                    <th>Ambiente</th>
+                    <th>Caso</th>
+                    <th>Componente</th>
+                    <th>Fecha</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="kr-pill">Producción</span></td>
+                    <td><span class="casenum">7040</span><span class="okline"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>APROBADO</span></td>
+                    <td><span class="kr-comp">API</span></td>
+                    <td class="num">12/09/2026</td>
+                    <td class="r"><span class="kr-btn primary sm"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Ver documentos</span></td>
+                  </tr>
+                  <!-- fila sin datos -->
+                  <tr class="empty">
+                    <td><span class="kr-pill">Preproducción</span></td>
+                    <td colspan="4"><span class="kr-noreg"><svg class="ic" aria-hidden="true"><use href="#i-minus-c"/></svg>Sin caso aprobado en Preproducción</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+
+        <!-- ESTADO VACÍO: mensaje centrado con icono, para cuando no hay resultados o falta permiso. -->
+        <div id="vacio" role="tabpanel" class="hidden">
+          <div class="kr-st"><span class="ring"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span><b class="kr-h3">No hay resultados</b>
+            <p>Prueba con otros filtros o vuelve a Inicio.</p><span class="kr-btn secondary sm">Ir a Inicio</span>
+          </div>
+        </div>
+      </section>
+
+      <div data-componente="footer"></div>
+    </div>
+    <script src="componentes.js"></script>
+  </body>
+</html>

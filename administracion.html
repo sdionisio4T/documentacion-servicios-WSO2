@@ -1,39 +1,268 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Administración · Documentación de Servicios WSO2</title><link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><div data-componente="iconos"></div><div class="kr-frame"><div data-componente="header" data-activo="admin"></div>
-<section class="kr-hero compact"><div class="kr-main"><h1 class="kr-h1">Administración</h1><div class="kr-accent"></div><p class="kr-lead" style="margin-bottom:0">Indicadores de uso del portal y auditoría de descargas. Esta sección solo la ve el rol Administrador.</p></div></section>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Administración · Documentación de Servicios WSO2</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div data-componente="iconos"></div>
+    <div class="kr-frame">
+      <div data-componente="header" data-activo="admin"></div>
+      <section class="kr-hero compact">
+        <div class="kr-main">
+          <h1 class="kr-h1">Administración</h1>
+          <div class="kr-accent"></div>
+          <p class="kr-lead" style="margin-bottom:0">Indicadores de uso del portal y auditoría de descargas. Esta sección solo la ve el rol Administrador.</p>
+        </div>
 
-<!-- lector: la sección no está disponible -->
-<section class="kr-main kr-pad" data-solo="lector"><div class="kr-st"><span class="ring"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><b class="kr-h3">Solo para administradores</b><p>Tu usuario tiene acceso de solo lectura. Si necesitas ver los indicadores o la auditoría, pide el rol Administrador a la Torre de Integración.</p><div class="row"><span class="kr-btn primary">Ir a Inicio</span></div></div></section>
+      </section>
+      <!-- lector: la sección no está disponible -->
+      <section class="kr-main kr-pad" data-solo="lector">
+        <div class="kr-st"><span class="ring"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg></span><b class="kr-h3">Solo para administradores</b>
+          <p>Tu usuario tiene acceso de solo lectura. Si necesitas ver los indicadores o la auditoría, pide el rol Administrador a la Torre de Integración.</p>
+          <div class="row"><span class="kr-btn primary">Ir a Inicio</span></div>
+        </div>
 
-<!-- admin: pestañas Indicadores | Auditoría -->
-<section class="kr-main" data-solo="admin" style="padding-top:24px" data-pestanas>
-<div class="kr-tabs" role="tablist"><span class="kr-tab on" role="tab" data-panel="indicadores"><svg class="ic sm" aria-hidden="true"><use href="#i-spark"/></svg>Indicadores</span><span class="kr-tab" role="tab" data-panel="auditoria"><svg class="ic sm" aria-hidden="true"><use href="#i-history"/></svg>Auditoría</span></div>
+      </section>
+      <!-- admin: pestañas Indicadores | Auditoría -->
+      <section class="kr-main" data-solo="admin" style="padding-top:24px" data-pestanas>
 
-<!-- Indicadores -->
-<div id="indicadores" role="tabpanel">
-<div class="kr-filters"><div class="kr-field"><span class="kr-lbl">Periodo</span><div class="kr-select"><span>Últimos 6 meses</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div></div><div class="kr-field"><span class="kr-lbl">Ambiente</span><div class="kr-select"><span>Todos los ambientes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div></div><div class="kr-hint" style="align-items:center"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>Datos del 1 de mayo al 20 de octubre de 2026 · Actualizado 20/10/2026 13:45</span></div></div>
+        <div class="kr-tabs" role="tablist"><span class="kr-tab on" role="tab" data-panel="indicadores"><svg class="ic sm" aria-hidden="true"><use href="#i-spark"/></svg>Indicadores</span><span class="kr-tab" role="tab" data-panel="auditoria"><svg class="ic sm" aria-hidden="true"><use href="#i-history"/></svg>Auditoría</span></div>
+        <!-- Indicadores -->
+        <div id="indicadores" role="tabpanel">
+          <div class="kr-filters">
+            <div class="kr-field"><span class="kr-lbl">Periodo</span>
+              <div class="kr-select"><span>Últimos 6 meses</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+            </div>
+            <div class="kr-field"><span class="kr-lbl">Ambiente</span>
+              <div class="kr-select"><span>Todos los ambientes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+            </div>
+            <div class="kr-hint" style="align-items:center"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span>Datos del 1 de mayo al 20 de octubre de 2026 · Actualizado 20/10/2026 13:45</span></div>
 
-<div class="kr-kpis">
-<div class="kr-kpi"><span class="l">Usuarios activos</span><span class="v">48</span><span class="n">de 62 con acceso</span></div>
-<div class="kr-kpi"><span class="l">Casos aprobados</span><span class="v">186</span><span class="n">89 % de los casos revisados</span></div>
-<div class="kr-kpi"><span class="l">Casos no aprobados</span><span class="v">23</span><span class="n">11 % de los casos revisados</span></div>
-<div class="kr-kpi"><span class="l">Casos pendientes</span><span class="v">7</span><span class="n">esperando revisión hoy</span></div>
-<div class="kr-kpi"><span class="l">Servicios vigentes</span><span class="v">137</span><span class="n">con versión vigente en 7 componentes</span></div>
-<div class="kr-kpi"><span class="l">Descargas</span><span class="v">742</span><span class="n">124 en los últimos 30 días</span></div>
-</div>
+          </div>
+          <div class="kr-kpis">
+            <div class="kr-kpi"><span class="l">Usuarios activos</span><span class="v">48</span><span class="n">de 62 con acceso</span></div>
+            <div class="kr-kpi"><span class="l">Casos aprobados</span><span class="v">186</span><span class="n">89 % de los casos revisados</span></div>
+            <div class="kr-kpi"><span class="l">Casos no aprobados</span><span class="v">23</span><span class="n">11 % de los casos revisados</span></div>
+            <div class="kr-kpi"><span class="l">Casos pendientes</span><span class="v">7</span><span class="n">esperando revisión hoy</span></div>
+            <div class="kr-kpi"><span class="l">Servicios vigentes</span><span class="v">137</span><span class="n">con versión vigente en 7 componentes</span></div>
+            <div class="kr-kpi"><span class="l">Descargas</span><span class="v">742</span><span class="n">124 en los últimos 30 días</span></div>
 
-<div class="kr-cgrid">
-<figure class="kr-chart" data-grafico="casos"><figcaption><div><b>Casos por mes</b><span>Aprobados y no aprobados, por mes de revisión</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span></figcaption><div class="kr-legend-row"><span><i style="background:var(--series-1)"></i>Aprobados</span><span><i style="background:var(--series-2)"></i>No aprobados</span></div><div class="kr-plot"></div></figure>
-<figure class="kr-chart" data-grafico="componentes"><figcaption><div><b>Servicios por componente</b><span>Servicios con versión vigente en cada componente</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span></figcaption><div class="kr-plot"></div></figure>
-<figure class="kr-chart wide" data-grafico="usuarios"><figcaption><div><b>Usuarios activos por semana</b><span>Personas distintas que consultaron o descargaron documentos</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span></figcaption><div class="kr-plot"></div></figure>
-<div class="kr-chart"><figcaption><div><b>Servicios más descargados</b><span>Descargas en el periodo</span></div></figcaption><table class="kr-t tight"><thead><tr><th>Servicio</th><th class="r">Descargas</th></tr></thead><tbody><tr><td class="svc">ProvidersAPI_InstPermitidas</td><td class="r num">96</td></tr><tr><td class="svc">ClientOrderTrack_API</td><td class="r num">71</td></tr><tr><td class="svc">Documentación API OpenAPI</td><td class="r num">58</td></tr><tr><td class="svc">BeyondHealt-CariAI</td><td class="r num">44</td></tr><tr><td class="svc">CorreoEmpleadores_API</td><td class="r num">39</td></tr></tbody></table></div>
-<div class="kr-chart"><figcaption><div><b>Usuarios más activos</b><span>Descargas en el periodo</span></div></figcaption><table class="kr-t tight"><thead><tr><th>Usuario</th><th class="r">Descargas</th></tr></thead><tbody><tr><td><b>Juan Pérez</b></td><td class="r num">142</td></tr><tr><td><b>María Gómez</b></td><td class="r num">118</td></tr><tr><td><b>Andrés Salazar</b></td><td class="r num">97</td></tr><tr><td><b>Laura Méndez</b></td><td class="r num">64</td></tr><tr><td><b>Carlos Rojas</b></td><td class="r num">31</td></tr></tbody></table></div>
-</div>
-</div>
+          </div>
+          <div class="kr-cgrid">
+            <figure class="kr-chart" data-grafico="casos">
+              <figcaption>
+                <div><b>Casos por mes</b><span>Aprobados y no aprobados, por mes de revisión</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span>
+              </figcaption>
+              <div class="kr-legend-row"><span><i style="background:var(--series-1)"></i>Aprobados</span><span><i style="background:var(--series-2)"></i>No aprobados</span></div>
+              <div class="kr-plot"></div>
+            </figure>
+            <figure class="kr-chart" data-grafico="componentes">
+              <figcaption>
+                <div><b>Servicios por componente</b><span>Servicios con versión vigente en cada componente</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span>
+              </figcaption>
+              <div class="kr-plot"></div>
+            </figure>
+            <figure class="kr-chart wide" data-grafico="usuarios">
+              <figcaption>
+                <div><b>Usuarios activos por semana</b><span>Personas distintas que consultaron o descargaron documentos</span></div><span class="kr-btn ghost sm" data-vista>Ver tabla</span>
+              </figcaption>
+              <div class="kr-plot"></div>
+            </figure>
+            <div class="kr-chart">
+              <figcaption>
+                <div><b>Servicios más descargados</b><span>Descargas en el periodo</span></div>
+              </figcaption>
+              <table class="kr-t tight">
+                <thead>
+                  <tr>
+                    <th>Servicio</th>
+                    <th class="r">Descargas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="svc">ProvidersAPI_InstPermitidas</td>
+                    <td class="r num">96</td>
+                  </tr>
+                  <tr>
+                    <td class="svc">ClientOrderTrack_API</td>
+                    <td class="r num">71</td>
+                  </tr>
+                  <tr>
+                    <td class="svc">Documentación API OpenAPI</td>
+                    <td class="r num">58</td>
+                  </tr>
+                  <tr>
+                    <td class="svc">BeyondHealt-CariAI</td>
+                    <td class="r num">44</td>
+                  </tr>
+                  <tr>
+                    <td class="svc">CorreoEmpleadores_API</td>
+                    <td class="r num">39</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="kr-chart">
+              <figcaption>
+                <div><b>Usuarios más activos</b><span>Descargas en el periodo</span></div>
+              </figcaption>
+              <table class="kr-t tight">
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th class="r">Descargas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><b>Juan Pérez</b></td>
+                    <td class="r num">142</td>
+                  </tr>
+                  <tr>
+                    <td><b>María Gómez</b></td>
+                    <td class="r num">118</td>
+                  </tr>
+                  <tr>
+                    <td><b>Andrés Salazar</b></td>
+                    <td class="r num">97</td>
+                  </tr>
+                  <tr>
+                    <td><b>Laura Méndez</b></td>
+                    <td class="r num">64</td>
+                  </tr>
+                  <tr>
+                    <td><b>Carlos Rojas</b></td>
+                    <td class="r num">31</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-<!-- Auditoría -->
-<div id="auditoria" role="tabpanel" class="hidden">
-<div class="kr-filters"><div class="kr-field"><span class="kr-lbl">Fechas</span><div class="kr-select"><span>Últimos 30 días</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div></div><div class="kr-field"><span class="kr-lbl">Usuario</span><div class="kr-select"><span>Todos los usuarios</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div></div><div class="kr-field"><span class="kr-lbl">Ambiente</span><div class="kr-select"><span>Todos los ambientes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div></div><div class="kr-field"><span class="kr-lbl">Buscar</span><div class="kr-select" style="min-width:300px;color:var(--ink-muted,#4B5563)"><span>Caso, servicio o archivo</span><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></div></div></div>
-<div class="kr-reshead" style="margin-top:24px"><div><h2 class="kr-h2">8 de 124 descargas</h2><p class="kr-sub">Ordenadas de la más reciente a la más antigua.</p></div><span class="kr-btn secondary"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar auditoría (.csv)</span></div><div class="kr-tw"><table class="kr-t tight"><thead><tr><th>Fecha y hora</th><th>Usuario</th><th>Caso</th><th>Servicio</th><th>Ambiente</th><th>Versión</th><th>Archivo descargado</th></tr></thead><tbody><tr><td class="num" style="white-space:nowrap">21/10/2026 15:42</td><td style="white-space:nowrap"><b>Juan Pérez</b></td><td class="num"><b>7183</b></td><td>ProvidersAPI_InstPermitidas</td><td><span class="kr-pill">Preproducción</span></td><td><b class="num">v1.3.0</b></td><td class="mono">Providers_Especialidad_Inst…collection.json</td></tr><tr><td class="num" style="white-space:nowrap">21/10/2026 15:40</td><td style="white-space:nowrap"><b>Juan Pérez</b></td><td class="num"><b>7183</b></td><td>ProvidersAPI_InstPermitidas</td><td><span class="kr-pill">Preproducción</span></td><td><b class="num">v1.3.0</b></td><td class="mono">Aprob_ARQUITECTURA_InstPermitidas_PREPROD…pdf</td></tr><tr><td class="num" style="white-space:nowrap">21/10/2026 11:12</td><td style="white-space:nowrap"><b>María Gómez</b></td><td class="num"><b>7185</b></td><td>ClientOrderTrack_API</td><td><span class="kr-pill">Producción</span></td><td><b class="num">v1.8.2</b></td><td class="mono">ClientOrderTrack_API.postman_collection.json</td></tr><tr><td class="num" style="white-space:nowrap">20/10/2026 17:05</td><td style="white-space:nowrap"><b>Andrés Salazar</b></td><td class="num"><b>7187</b></td><td>Documentación API OpenAPI</td><td><span class="kr-pill">Preproducción</span></td><td><b class="num">v2.1.0</b></td><td class="mono">openapi_documentacion_v2.1.0.json</td></tr><tr><td class="num" style="white-space:nowrap">20/10/2026 09:31</td><td style="white-space:nowrap"><b>María Gómez</b></td><td class="num"><b>7040</b></td><td>ProvidersAPI_InstPermitidas</td><td><span class="kr-pill">Producción</span></td><td><b class="num">v1.2.0</b></td><td class="mono">Providers.allowedInstitutions_01jul2025.xlsx</td></tr><tr><td class="num" style="white-space:nowrap">19/10/2026 16:48</td><td style="white-space:nowrap"><b>Laura Méndez</b></td><td class="num"><b>7181</b></td><td>BeyondHealt-CariAI</td><td><span class="kr-pill">Producción</span></td><td><b class="num">v3.0.1</b></td><td class="mono">BeyondHealt-CariAI.postman_collection.json</td></tr><tr><td class="num" style="white-space:nowrap">19/10/2026 10:20</td><td style="white-space:nowrap"><b>Andrés Salazar</b></td><td class="num"><b>8176</b></td><td>ValidaCliente</td><td><span class="kr-pill">Preproducción</span></td><td><b class="num">v1.4.0</b></td><td class="mono">ValidaCliente_config.json</td></tr><tr><td class="num" style="white-space:nowrap">18/10/2026 14:03</td><td style="white-space:nowrap"><b>Juan Pérez</b></td><td class="num"><b>9172</b></td><td>CorreoEmpleadores_API</td><td><span class="kr-pill">Producción</span></td><td><b class="num">v2.0.0</b></td><td class="mono">CorreoEmpleadores_API.postman_collection.json</td></tr></tbody></table></div><div class="kr-foot">Página 1 de 16</div>
-</div>
-</section>
-<div data-componente="footer"></div></div><script src="componentes.js"></script><script src="indicadores.js"></script></body></html>
+        </div>
+        <!-- Auditoría -->
+        <div id="auditoria" role="tabpanel" class="hidden">
+          <div class="kr-filters">
+            <div class="kr-field"><span class="kr-lbl">Fechas</span>
+              <div class="kr-select"><span>Últimos 30 días</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+            </div>
+            <div class="kr-field"><span class="kr-lbl">Usuario</span>
+              <div class="kr-select"><span>Todos los usuarios</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+            </div>
+            <div class="kr-field"><span class="kr-lbl">Ambiente</span>
+              <div class="kr-select"><span>Todos los ambientes</span><svg class="ic" aria-hidden="true"><use href="#i-chev-d"/></svg></div>
+            </div>
+            <div class="kr-field"><span class="kr-lbl">Buscar</span>
+              <div class="kr-select" style="min-width:300px;color:var(--ink-muted,#4B5563)"><span>Caso, servicio o archivo</span><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></div>
+            </div>
+          </div>
+          <div class="kr-reshead" style="margin-top:24px">
+            <div>
+              <h2 class="kr-h2">8 de 124 descargas</h2>
+              <p class="kr-sub">Ordenadas de la más reciente a la más antigua.</p>
+            </div><span class="kr-btn secondary"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Descargar auditoría (.csv)</span>
+          </div>
+          <div class="kr-tw">
+            <table class="kr-t tight">
+              <thead>
+                <tr>
+                  <th>Fecha y hora</th>
+                  <th>Usuario</th>
+                  <th>Caso</th>
+                  <th>Servicio</th>
+                  <th>Ambiente</th>
+                  <th>Versión</th>
+                  <th>Archivo descargado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num" style="white-space:nowrap">21/10/2026 15:42</td>
+                  <td style="white-space:nowrap"><b>Juan Pérez</b></td>
+                  <td class="num"><b>7183</b></td>
+                  <td>ProvidersAPI_InstPermitidas</td>
+                  <td><span class="kr-pill">Preproducción</span></td>
+                  <td><b class="num">v1.3.0</b></td>
+                  <td class="mono">Providers_Especialidad_Inst…collection.json</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">21/10/2026 15:40</td>
+                  <td style="white-space:nowrap"><b>Juan Pérez</b></td>
+                  <td class="num"><b>7183</b></td>
+                  <td>ProvidersAPI_InstPermitidas</td>
+                  <td><span class="kr-pill">Preproducción</span></td>
+                  <td><b class="num">v1.3.0</b></td>
+                  <td class="mono">Aprob_ARQUITECTURA_InstPermitidas_PREPROD…pdf</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">21/10/2026 11:12</td>
+                  <td style="white-space:nowrap"><b>María Gómez</b></td>
+                  <td class="num"><b>7185</b></td>
+                  <td>ClientOrderTrack_API</td>
+                  <td><span class="kr-pill">Producción</span></td>
+                  <td><b class="num">v1.8.2</b></td>
+                  <td class="mono">ClientOrderTrack_API.postman_collection.json</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">20/10/2026 17:05</td>
+                  <td style="white-space:nowrap"><b>Andrés Salazar</b></td>
+                  <td class="num"><b>7187</b></td>
+                  <td>Documentación API OpenAPI</td>
+                  <td><span class="kr-pill">Preproducción</span></td>
+                  <td><b class="num">v2.1.0</b></td>
+                  <td class="mono">openapi_documentacion_v2.1.0.json</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">20/10/2026 09:31</td>
+                  <td style="white-space:nowrap"><b>María Gómez</b></td>
+                  <td class="num"><b>7040</b></td>
+                  <td>ProvidersAPI_InstPermitidas</td>
+                  <td><span class="kr-pill">Producción</span></td>
+                  <td><b class="num">v1.2.0</b></td>
+                  <td class="mono">Providers.allowedInstitutions_01jul2025.xlsx</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">19/10/2026 16:48</td>
+                  <td style="white-space:nowrap"><b>Laura Méndez</b></td>
+                  <td class="num"><b>7181</b></td>
+                  <td>BeyondHealt-CariAI</td>
+                  <td><span class="kr-pill">Producción</span></td>
+                  <td><b class="num">v3.0.1</b></td>
+                  <td class="mono">BeyondHealt-CariAI.postman_collection.json</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">19/10/2026 10:20</td>
+                  <td style="white-space:nowrap"><b>Andrés Salazar</b></td>
+                  <td class="num"><b>8176</b></td>
+                  <td>ValidaCliente</td>
+                  <td><span class="kr-pill">Preproducción</span></td>
+                  <td><b class="num">v1.4.0</b></td>
+                  <td class="mono">ValidaCliente_config.json</td>
+                </tr>
+                <tr>
+                  <td class="num" style="white-space:nowrap">18/10/2026 14:03</td>
+                  <td style="white-space:nowrap"><b>Juan Pérez</b></td>
+                  <td class="num"><b>9172</b></td>
+                  <td>CorreoEmpleadores_API</td>
+                  <td><span class="kr-pill">Producción</span></td>
+                  <td><b class="num">v2.0.0</b></td>
+                  <td class="mono">CorreoEmpleadores_API.postman_collection.json</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="kr-foot">Página 1 de 16</div>
+        </div>
+      </section>
+      <div data-componente="footer"></div>
+    </div>
+    <script src="componentes.js"></script>
+    <script src="indicadores.js"></script>
+  </body>
+</html>

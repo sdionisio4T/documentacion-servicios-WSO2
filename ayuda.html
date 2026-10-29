@@ -1,68 +1,213 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ayuda · Documentación de Servicios WSO2</title><link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><div data-componente="iconos"></div><div class="kr-frame"><div data-componente="header" data-activo="ayuda"></div>
-<section class="kr-hero compact"><div class="kr-main"><h1 class="kr-h1">Ayuda</h1><div class="kr-accent"></div><p class="kr-lead" style="margin-bottom:0">Respuestas a las preguntas más comunes sobre el portal. Pulsa una pregunta para ver la respuesta.</p></div></section>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ayuda · Documentación de Servicios WSO2</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div data-componente="iconos"></div>
+    <div class="kr-frame">
+      <div data-componente="header" data-activo="ayuda"></div>
+      <section class="kr-hero compact">
+        <div class="kr-main">
+          <h1 class="kr-h1">Ayuda</h1>
+          <div class="kr-accent"></div>
+          <p class="kr-lead" style="margin-bottom:0">Respuestas a las preguntas más comunes sobre el portal. Pulsa una pregunta para ver la respuesta.</p>
+        </div>
 
-<section class="kr-main kr-pad kr-ayuda">
-<nav class="kr-toc" aria-label="Temas de ayuda"><span class="kr-lbl">Temas</span>
+      </section>
+      <section class="kr-main kr-pad kr-ayuda">
+
+        <nav class="kr-toc" aria-label="Temas de ayuda"><span class="kr-lbl">Temas</span>
 <a href="#primeros-pasos">Primeros pasos</a><a href="#versiones">Versiones y estados</a><a href="#ambientes">Ambientes y componentes</a><a href="#visor">Visor de documentos</a><a href="#plantillas">Plantillas</a><a href="#acceso">Datos y acceso</a></nav>
 
-<div class="kr-faqs">
+        <div class="kr-faqs">
+          <div class="kr-faqg" id="primeros-pasos">
+            <h2 class="kr-h2">Primeros pasos</h2>
+            <details class="kr-faq" open>
+              <summary>¿Para qué sirve este portal?</summary>
+              <div>
+                <p>Reúne en un solo lugar la documentación de los servicios WSO2 de la Torre de Integración: los archivos JSON de configuración, las colecciones de Postman, los manuales y las aprobaciones de cada caso.</p>
+                <p>Siempre muestra primero la versión que se debe usar hoy en cada ambiente.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Cómo busco un servicio?</summary>
+              <div>
+                <p>En <b>Inicio</b>, escribe el nombre del servicio o el número de caso en el buscador y pulsa <kbd>Enter</kbd>. No hace falta el nombre exacto: con una parte (por ejemplo, «providers») es suficiente.</p>
+                <p>Con los filtros <b>Ambiente</b> y <b>Componente</b> acotas los resultados. También puedes entrar desde las tarjetas de <b>Explorar por componente</b>.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Qué veo en los resultados?</summary>
+              <div>
+                <p>Cada servicio aparece en una tarjeta con su versión vigente en cada ambiente: el número de caso, la versión, el componente, la fecha y cuántos archivos tiene. Desde ahí puedes abrir los documentos o ver el historial de versiones.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="primeros-pasos"><h2 class="kr-h2">Primeros pasos</h2>
-<details class="kr-faq" open><summary>¿Para qué sirve este portal?</summary><div><p>Reúne en un solo lugar la documentación de los servicios WSO2 de la Torre de Integración: los archivos JSON de configuración, las colecciones de Postman, los manuales y las aprobaciones de cada caso.</p><p>Siempre muestra primero la versión que se debe usar hoy en cada ambiente.</p></div></details>
-<details class="kr-faq"><summary>¿Cómo busco un servicio?</summary><div><p>En <b>Inicio</b>, escribe el nombre del servicio o el número de caso en el buscador y pulsa <kbd>Enter</kbd>. No hace falta el nombre exacto: con una parte (por ejemplo, «providers») es suficiente.</p><p>Con los filtros <b>Ambiente</b> y <b>Componente</b> acotas los resultados. También puedes entrar desde las tarjetas de <b>Explorar por componente</b>.</p></div></details>
-<details class="kr-faq"><summary>¿Qué veo en los resultados?</summary><div><p>Cada servicio aparece en una tarjeta con su versión vigente en cada ambiente: el número de caso, la versión, el componente, la fecha y cuántos archivos tiene. Desde ahí puedes abrir los documentos o ver el historial de versiones.</p></div></details>
-</div>
+          </div>
+          <div class="kr-faqg" id="versiones">
+            <h2 class="kr-h2">Versiones y estados</h2>
+            <details class="kr-faq">
+              <summary>¿Qué significa «Vigente»?</summary>
+              <div>
+                <p>Es el <b>último caso aprobado</b> de un servicio en un ambiente: la versión que se debe usar hoy. Cada servicio tiene, como mucho, una versión vigente por ambiente.</p>
+                <p>En el historial se marca con <span class="kr-badge info"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>Vigente</span></p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Qué estados puede tener un caso?</summary>
+              <div>
+                <ul class="kr-estados">
+                  <li><span class="kr-badge ok"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>APROBADO</span><span>El caso pasó la revisión. El aprobado más reciente es la versión vigente.</span></li>
+                  <li><span class="kr-badge bad"><svg class="ic" aria-hidden="true"><use href="#i-x-c"/></svg>NO APROBADO</span><span>El caso se revisó y se rechazó. Queda en el historial, pero nunca es la versión vigente.</span></li>
+                  <li><span class="kr-badge warn"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>PENDIENTE</span><span>El caso está esperando revisión. Mientras tanto se sigue usando la versión vigente anterior.</span></li>
+                </ul>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Qué quiere decir «Reemplazado por»?</summary>
+              <div>
+                <p>Es un caso aprobado que ya no es el vigente porque después se aprobó otro. El número indica qué caso lo sustituyó.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Dónde veo las versiones anteriores?</summary>
+              <div>
+                <p>En el <b>Historial de versiones</b> de cada servicio, con una pestaña por ambiente. Los casos van del más reciente al más antiguo y puedes abrir los documentos de cualquiera de ellos.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Por qué un servicio no aparece en un ambiente?</summary>
+              <div>
+                <p>Porque todavía no tiene ningún caso aprobado en ese ambiente. Si hay un caso pendiente, aparecerá cuando se apruebe.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="versiones"><h2 class="kr-h2">Versiones y estados</h2>
-<details class="kr-faq"><summary>¿Qué significa «Vigente»?</summary><div><p>Es el <b>último caso aprobado</b> de un servicio en un ambiente: la versión que se debe usar hoy. Cada servicio tiene, como mucho, una versión vigente por ambiente.</p><p>En el historial se marca con <span class="kr-badge info"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>Vigente</span></p></div></details>
-<details class="kr-faq"><summary>¿Qué estados puede tener un caso?</summary><div><ul class="kr-estados">
-<li><span class="kr-badge ok"><svg class="ic" aria-hidden="true"><use href="#i-check-c"/></svg>APROBADO</span><span>El caso pasó la revisión. El aprobado más reciente es la versión vigente.</span></li>
-<li><span class="kr-badge bad"><svg class="ic" aria-hidden="true"><use href="#i-x-c"/></svg>NO APROBADO</span><span>El caso se revisó y se rechazó. Queda en el historial, pero nunca es la versión vigente.</span></li>
-<li><span class="kr-badge warn"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>PENDIENTE</span><span>El caso está esperando revisión. Mientras tanto se sigue usando la versión vigente anterior.</span></li>
-</ul></div></details>
-<details class="kr-faq"><summary>¿Qué quiere decir «Reemplazado por»?</summary><div><p>Es un caso aprobado que ya no es el vigente porque después se aprobó otro. El número indica qué caso lo sustituyó.</p></div></details>
-<details class="kr-faq"><summary>¿Dónde veo las versiones anteriores?</summary><div><p>En el <b>Historial de versiones</b> de cada servicio, con una pestaña por ambiente. Los casos van del más reciente al más antiguo y puedes abrir los documentos de cualquiera de ellos.</p></div></details>
-<details class="kr-faq"><summary>¿Por qué un servicio no aparece en un ambiente?</summary><div><p>Porque todavía no tiene ningún caso aprobado en ese ambiente. Si hay un caso pendiente, aparecerá cuando se apruebe.</p></div></details>
-</div>
+          </div>
+          <div class="kr-faqg" id="ambientes">
+            <h2 class="kr-h2">Ambientes y componentes</h2>
+            <details class="kr-faq">
+              <summary>¿Qué ambientes hay?</summary>
+              <div>
+                <dl class="kr-defs">
+                  <dt>Producción</dt>
+                  <dd>Donde funcionan los servicios que usan los usuarios finales.</dd>
+                  <dt>Preproducción</dt>
+                  <dd>Réplica de producción para la validación final antes de publicar.</dd>
+                  <dt>Pruebas</dt>
+                  <dd>Para las pruebas funcionales y de integración.</dd>
+                  <dt>Desarrollo</dt>
+                  <dd>Donde se construyen y ajustan los servicios.</dd>
+                </dl>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Qué es cada componente?</summary>
+              <div>
+                <dl class="kr-defs">
+                  <dt>ESB</dt>
+                  <dd>Bus de servicios: mediación y enrutamiento de los servicios publicados.</dd>
+                  <dt>EI</dt>
+                  <dd>Enterprise Integrator: integración y orquestación de flujos.</dd>
+                  <dt>API</dt>
+                  <dd>Servicios publicados y documentados como API.</dd>
+                  <dt>APIM</dt>
+                  <dd>API Manager: publicación, seguridad y consumo de las API.</dd>
+                  <dt>DSS</dt>
+                  <dd>Data Services Server: servicios de datos expuestos desde bases de datos.</dd>
+                  <dt>EI-APIM</dt>
+                  <dd>Integraciones de EI que se publican a través de API Manager.</dd>
+                  <dt>ESB-DSS</dt>
+                  <dd>Servicios del ESB que consumen servicios de datos de DSS.</dd>
+                </dl>
+                <p>Los nodos y servidores de cada componente están en <a href="info.html">Información WSO2</a>.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="ambientes"><h2 class="kr-h2">Ambientes y componentes</h2>
-<details class="kr-faq"><summary>¿Qué ambientes hay?</summary><div><dl class="kr-defs">
-<dt>Producción</dt><dd>Donde funcionan los servicios que usan los usuarios finales.</dd>
-<dt>Preproducción</dt><dd>Réplica de producción para la validación final antes de publicar.</dd>
-<dt>Pruebas</dt><dd>Para las pruebas funcionales y de integración.</dd>
-<dt>Desarrollo</dt><dd>Donde se construyen y ajustan los servicios.</dd></dl></div></details>
-<details class="kr-faq"><summary>¿Qué es cada componente?</summary><div><dl class="kr-defs">
-<dt>ESB</dt><dd>Bus de servicios: mediación y enrutamiento de los servicios publicados.</dd>
-<dt>EI</dt><dd>Enterprise Integrator: integración y orquestación de flujos.</dd>
-<dt>API</dt><dd>Servicios publicados y documentados como API.</dd>
-<dt>APIM</dt><dd>API Manager: publicación, seguridad y consumo de las API.</dd>
-<dt>DSS</dt><dd>Data Services Server: servicios de datos expuestos desde bases de datos.</dd>
-<dt>EI-APIM</dt><dd>Integraciones de EI que se publican a través de API Manager.</dd>
-<dt>ESB-DSS</dt><dd>Servicios del ESB que consumen servicios de datos de DSS.</dd></dl>
-<p>Los nodos y servidores de cada componente están en <a href="info.html">Información WSO2</a>.</p></div></details>
-</div>
+          </div>
+          <div class="kr-faqg" id="visor">
+            <h2 class="kr-h2">Visor de documentos</h2>
+            <details class="kr-faq">
+              <summary>¿Cómo me muevo por los documentos de un caso?</summary>
+              <div>
+                <p>Elige un archivo en la lista de la izquierda o usa el teclado:</p>
+                <ul class="kr-atajos">
+                  <li><kbd>↑</kbd><kbd>↓</kbd><span>archivo anterior o siguiente</span></li>
+                  <li><kbd>Esc</kbd><span>cerrar el visor</span></li>
+                </ul>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Por qué hay datos ocultos en los JSON?</summary>
+              <div>
+                <p>Por seguridad, el visor oculta usuarios, claves y URL internas, y los muestra como <span class="kr-mask">••••••</span>. El resto del archivo se ve completo.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Puedo descargar los archivos?</summary>
+              <div>
+                <p>Sí. Puedes descargar un archivo o todos los del caso a la vez con <b>Descargar archivos</b>. Cada descarga queda registrada con tu usuario, la fecha y el archivo.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="visor"><h2 class="kr-h2">Visor de documentos</h2>
-<details class="kr-faq"><summary>¿Cómo me muevo por los documentos de un caso?</summary><div><p>Elige un archivo en la lista de la izquierda o usa el teclado:</p><ul class="kr-atajos"><li><kbd>↑</kbd><kbd>↓</kbd><span>archivo anterior o siguiente</span></li><li><kbd>Esc</kbd><span>cerrar el visor</span></li></ul></div></details>
-<details class="kr-faq"><summary>¿Por qué hay datos ocultos en los JSON?</summary><div><p>Por seguridad, el visor oculta usuarios, claves y URL internas, y los muestra como <span class="kr-mask">••••••</span>. El resto del archivo se ve completo.</p></div></details>
-<details class="kr-faq"><summary>¿Puedo descargar los archivos?</summary><div><p>Sí. Puedes descargar un archivo o todos los del caso a la vez con <b>Descargar archivos</b>. Cada descarga queda registrada con tu usuario, la fecha y el archivo.</p></div></details>
-</div>
+          </div>
+          <div class="kr-faqg" id="plantillas">
+            <h2 class="kr-h2">Plantillas</h2>
+            <details class="kr-faq">
+              <summary>¿Qué encuentro en Plantillas?</summary>
+              <div>
+                <p>Checklists, manuales de usuario y formatos listos para usar en los casos. Descarga la que necesites y complétala.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Cómo subo una plantilla?</summary>
+              <div>
+                <p>En <a href="plantillas.html">Plantillas</a>, pulsa <b>Subir plantilla</b>, elige el archivo (Word, Excel o PDF, hasta 25 MB), ponle nombre y categoría y confirma. Queda registrado quién la subió y cuándo.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="plantillas"><h2 class="kr-h2">Plantillas</h2>
-<details class="kr-faq"><summary>¿Qué encuentro en Plantillas?</summary><div><p>Checklists, manuales de usuario y formatos listos para usar en los casos. Descarga la que necesites y complétala.</p></div></details>
-<details class="kr-faq"><summary>¿Cómo subo una plantilla?</summary><div><p>En <a href="plantillas.html">Plantillas</a>, pulsa <b>Subir plantilla</b>, elige el archivo (Word, Excel o PDF, hasta 25 MB), ponle nombre y categoría y confirma. Queda registrado quién la subió y cuándo.</p></div></details>
-</div>
+          </div>
+          <div class="kr-faqg" id="acceso">
+            <h2 class="kr-h2">Datos y acceso</h2>
+            <details class="kr-faq">
+              <summary>¿De dónde salen los datos y cada cuánto se actualizan?</summary>
+              <div>
+                <p>Los casos y sus documentos se sincronizan automáticamente con el sistema de gestión de casos de la Torre de Integración. La fecha y hora de la última sincronización aparece al pie de cada página.</p>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>¿Qué puedo hacer con mi usuario?</summary>
+              <div>
+                <dl class="kr-defs">
+                  <dt>Lector</dt>
+                  <dd>Consulta servicios, versiones y documentos, y descarga archivos y plantillas.</dd>
+                  <dt>Administrador</dt>
+                  <dd>Además, ve la sección <b>Administración</b>: indicadores de uso y auditoría de descargas.</dd>
+                </dl>
+              </div>
+            </details>
+            <details class="kr-faq">
+              <summary>Veo información desactualizada o un error, ¿qué hago?</summary>
+              <div>
+                <p>Revisa la fecha de la última sincronización al pie de la página. Si el problema sigue, avisa a la Torre de Integración con el nombre del servicio y el número de caso.</p>
+              </div>
+            </details>
 
-<div class="kr-faqg" id="acceso"><h2 class="kr-h2">Datos y acceso</h2>
-<details class="kr-faq"><summary>¿De dónde salen los datos y cada cuánto se actualizan?</summary><div><p>Los casos y sus documentos se sincronizan automáticamente con el sistema de gestión de casos de la Torre de Integración. La fecha y hora de la última sincronización aparece al pie de cada página.</p></div></details>
-<details class="kr-faq"><summary>¿Qué puedo hacer con mi usuario?</summary><div><dl class="kr-defs">
-<dt>Lector</dt><dd>Consulta servicios, versiones y documentos, y descarga archivos y plantillas.</dd>
-<dt>Administrador</dt><dd>Además, ve la sección <b>Administración</b>: indicadores de uso y auditoría de descargas.</dd></dl></div></details>
-<details class="kr-faq"><summary>Veo información desactualizada o un error, ¿qué hago?</summary><div><p>Revisa la fecha de la última sincronización al pie de la página. Si el problema sigue, avisa a la Torre de Integración con el nombre del servicio y el número de caso.</p></div></details>
-</div>
-
-<div class="kr-contacto"><span class="ring"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg></span><div><b>¿No encuentras lo que buscas?</b><p>Escribe a la Torre de Integración con el nombre del servicio y el número de caso, y te ayudaremos.</p></div></div>
-
-</div>
-</section>
-<div data-componente="footer"></div></div><script src="componentes.js"></script></body></html>
+          </div>
+          <div class="kr-contacto"><span class="ring"><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg></span>
+            <div><b>¿No encuentras lo que buscas?</b>
+              <p>Escribe a la Torre de Integración con el nombre del servicio y el número de caso, y te ayudaremos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div data-componente="footer"></div>
+    </div>
+    <script src="componentes.js"></script>
+  </body>
+</html>
